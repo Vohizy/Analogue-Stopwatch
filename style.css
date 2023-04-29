@@ -1,0 +1,193 @@
+@font-face {
+  font-family: "Digital-7";
+  src: url(./font/digital-7-mono.ttf) format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.side {
+  width: 50%;
+  height: 100vh;
+  background: linear-gradient(
+      to right,
+      rgba(100, 184, 129, 0.179),
+      rgba(164, 192, 174, 0.048)
+    ),
+    url(./img/085f120f-3f75-424b-8511-2a92916a225c.jpg);
+  object-fit: cover;
+  background-position: center;
+}
+body .contenair-body {
+  width: 50%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to right,
+    rgba(43, 74, 54, 0.874),
+    rgba(79, 121, 94, 0.511)
+  );
+}
+.body {
+  width: 300px;
+  height: 300px;
+  border: 10px solid rgb(100, 184, 129);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 0 20px rgb(128, 126, 126), 0 0 20px rgb(128, 126, 126);
+}
+.bag {
+  width: calc(300px - 5px);
+  height: calc(300px - 5px);
+  border: 7px solid transparent;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.bag > .number {
+  width: calc(300px - 8px);
+  height: calc(300px - 8px);
+  border-radius: 50%;
+  position: relative;
+}
+.bag > .number > span {
+  position: absolute;
+  text-align: center;
+  inset: 10px;
+  transform: rotate(calc((360deg / 12) * var(--i)));
+}
+span > b {
+  display: block;
+  transform: rotate(calc((-360deg / 12) * var(--i)));
+  color: aliceblue;
+}
+.bag > div {
+  position: absolute;
+}
+.cer_eguille {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cercle {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(100, 184, 129);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgb(128, 126, 126);
+  position: absolute;
+}
+.eguille {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.eguille > div {
+  width: 3.5px;
+  height: 100px;
+  background-color: rgb(100, 184, 129);
+  border-top-right-radius: 90%;
+  border-top-left-radius: 90%;
+  position: absolute;
+}
+
+.string-crono {
+  margin-top: 30px;
+  width: 35%;
+  display: flex;
+  justify-content: center;
+}
+.heure,
+.minute,
+.seconde {
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.string-crono > span {
+  font-size: 60px;
+  color: white;
+}
+.heure > input,
+.minute > input,
+.seconde > input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-family: "Digital-7", sans-serif;
+  font-size: 50px;
+  color: white;
+  background-color: transparent;
+}
+@media screen and (max-width: 1042px) {
+  .string-crono {
+    width: 53%;
+  }
+}
+@media screen and (max-width: 870px) {
+  .string-crono {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 826px) {
+  .string-crono {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 711px) {
+  .side {
+    display: none;
+  }
+  body .contenair-body {
+    width: 100%;
+  }
+  .string-crono {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 416px) {
+  .side {
+    display: none;
+  }
+  body .contenair-body {
+    width: 100%;
+  }
+  .string-crono {
+    width: 46%;
+  }
+}
+@media screen and (max-width: 377px) {
+  .side {
+    display: none;
+  }
+  body .contenair-body {
+    width: 100%;
+  }
+  .string-crono {
+    width: 50%;
+  }
+}
